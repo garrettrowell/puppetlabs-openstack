@@ -15,7 +15,7 @@ class openstack::resources::repo::rdo(
     $osver = regsubst($::operatingsystemrelease, '(\d+)\..*', '\1')
 
     yumrepo { 'rdo-release':
-      baseurl  => "http://repos.fedorapeople.org/repos/openstack/openstack-${release}/${dist}-${osver}/",
+      baseurl  => "http://repos.fedorapeople.org/repos/openstack/EOL/openstack-${release}/${dist}-${osver}/",
       descr    => "OpenStack ${release_cap} Repository",
       enabled  => 1,
       gpgcheck => 1,
